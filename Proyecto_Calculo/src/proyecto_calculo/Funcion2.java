@@ -14,7 +14,7 @@ System.out.println(" Ingrese el límite inferior de la tabla de valores:\n ");
 lim_inferior = entrada.nextInt();
 System.out.println("Ingrese el límite superior de la tabla de valores:\n");
 lim_superior = entrada.nextInt();
-System.out.println("Ingrese el límite superior de la tabla de valores:\n");
+System.out.println("Ingrese la escala de la tabla de valores:\n");
 escala = entrada.nextDouble();
 // Generación de límites de la tabla
 System.out.println("_________________________________________ "  + "\n" +
@@ -31,7 +31,7 @@ double contador = lim_inferior-escala;
 System.out.println("|         x          |        y         |");
 while (contador < lim_superior) {    
     contador = contador + escala;
-    valory= (2*(contador*contador))+(4*contador)-3;
+    valory= (4*(contador*contador))+(2*contador)-10;
     
 System.out.println(("        "+contador)+"                "+(valory));  
 }
