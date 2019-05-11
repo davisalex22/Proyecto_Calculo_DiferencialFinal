@@ -1,6 +1,6 @@
 package proyecto_calculo;
 import java.util.Scanner;
-public class Funcion1 {
+public class Funcion3 {
     public static void main(String[] args) {
 // INICIO PROGRAMA
 Scanner entrada = new Scanner(System.in);
