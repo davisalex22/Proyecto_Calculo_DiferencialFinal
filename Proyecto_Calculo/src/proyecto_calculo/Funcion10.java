@@ -37,7 +37,7 @@ while (contador < lim_superior) {
 System.out.println(("           "+contador)+"                  "+
                     (String.format("%.2f", valory)));  
 }
-System.out.println("|______________________________________________|");        
+System.out.println("|_______________________________________________|");        
 
     
 // FIN PROGRAMA
