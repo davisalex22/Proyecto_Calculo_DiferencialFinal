@@ -31,7 +31,7 @@ double contador = lim_inferior-escala;
 System.out.println("|         x          |        y         |");
 while (contador < lim_superior) {    
     contador = contador + escala;
-    valory= (2*(contador*contador))+(4*contador)-3;
+    valory =(63*Math.pow(contador, 4))-65*Math.pow(contador, 3)-23*Math.pow(contador, 2)+2*contador -10;
     
 System.out.println(("        "+contador)+"                "+(valory));  
 }
