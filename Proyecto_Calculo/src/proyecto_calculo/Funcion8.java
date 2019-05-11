@@ -18,7 +18,7 @@ System.out.println("Ingrese el límite superior de la tabla de valores:\n");
 escala = entrada.nextDouble();
 // Generación de límites de la tabla
 System.out.println("_________________________________________ "  + "\n" +
-                   "|------  La función es 2x^2+4x-3  ------|"   + "\n" +
+                   "|- La función es 50/5x^3+1/2x^2-2x+12  -|"   + "\n" +
                    "_________________________________________ "  + "\n" +
                    "| Límite inferior = "+lim_inferior           + "\n" +
                    "|Límite superior = "+lim_superior            + "\n" +
@@ -31,7 +31,7 @@ double contador = lim_inferior-escala;
 System.out.println("|         x          |        y         |");
 while (contador < lim_superior) {    
     contador = contador + escala;
-    valory= (2*(contador*contador))+(4*contador)-3;
+  valory = (50/5*Math.pow(contador, 3))+(1/2*Math.pow(contador, 2))-(2*(contador)) + 12;
     
 System.out.println(("        "+contador)+"                "+(valory));  
 }

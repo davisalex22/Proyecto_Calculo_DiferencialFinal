@@ -18,7 +18,7 @@ System.out.println("Ingrese el límite superior de la tabla de valores:\n");
 escala = entrada.nextDouble();
 // Generación de límites de la tabla
 System.out.println("_________________________________________ "  + "\n" +
-                   "|------  La función es 2x^2+4x-3  ------|"   + "\n" +
+                   "|-La función es 63x^4-65x^3-23x^2+2x-10-|"   + "\n" +
                    "_________________________________________ "  + "\n" +
                    "| Límite inferior = "+lim_inferior           + "\n" +
                    "|Límite superior = "+lim_superior            + "\n" +
