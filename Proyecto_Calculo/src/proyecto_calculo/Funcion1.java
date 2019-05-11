@@ -14,7 +14,7 @@ System.out.println(" Ingrese el límite inferior de la tabla de valores:\n ");
 lim_inferior = entrada.nextInt();
 System.out.println("Ingrese el límite superior de la tabla de valores:\n");
 lim_superior = entrada.nextInt();
-System.out.println("Ingrese el límite superior de la tabla de valores:\n");
+System.out.println("Ingrese la escala de la tabla de valores:\n");
 escala = entrada.nextDouble();
 // Generación de límites de la tabla
 System.out.println("_________________________________________ "  + "\n" +
