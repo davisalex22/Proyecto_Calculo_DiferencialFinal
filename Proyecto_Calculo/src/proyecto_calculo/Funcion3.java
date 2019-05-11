@@ -18,11 +18,11 @@ System.out.println("Ingrese la escala de la tabla de valores:\n");
 escala = entrada.nextDouble();
 // Generación de límites de la tabla
 System.out.println("_________________________________________ "  + "\n" +
-                   "|------  La función es 2x^2+4x-3  ------|"   + "\n" +
+                   "|---  La función es 9x^3+4x^2-8x-4  ----|"   + "\n" +
                    "_________________________________________ "  + "\n" +
-                   "| Límite inferior = "+lim_inferior           + "\n" +
-                   "|Límite superior = "+lim_superior            + "\n" +
-                   "| Escala = "+escala                          + "\n" +        
+                   "|* Límite inferior = "+lim_inferior          + "\n" +
+                   "|* Límite superior = "+lim_superior          + "\n" +
+                   "|* Escala = "+escala                         + "\n" +        
                    "_________________________________________ "  + "\n" +
                    "|            TABLA DE VALORES           |  " + "\n" +
                    "|_______________________________________|");

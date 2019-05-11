@@ -17,12 +17,12 @@ lim_superior = entrada.nextInt();
 System.out.println("Ingrese la escala de la tabla de valores:\n");
 escala = entrada.nextDouble();
 // Generación de límites de la tabla
-System.out.println("_________________________________________ "  + "\n" +
-                   "|------  La función es 2x^2+4x-3  ------|"   + "\n" +
-                   "_________________________________________ "  + "\n" +
-                   "| Límite inferior = "+lim_inferior           + "\n" +
-                   "|Límite superior = "+lim_superior            + "\n" +
-                   "| Escala = "+escala                          + "\n" +        
+System.out.println("_________________________________________"  + "\n" +
+                   "|------  La función es 2x^2+4x-3  ------|"  + "\n" +
+                   "_________________________________________"  + "\n" +
+                   "|* Límite inferior = "+lim_inferior         + "\n" +
+                   "|* Límite superior = "+lim_superior         + "\n" +
+                   "|* Escala = "+escala                        + "\n" +        
                    "_________________________________________ "  + "\n" +
                    "|            TABLA DE VALORES           |  " + "\n" +
                    "|_______________________________________|");
@@ -31,9 +31,10 @@ double contador = lim_inferior-escala;
 System.out.println("|         x          |        y         |");
 while (contador < lim_superior) {    
     contador = contador + escala;
-    valory= (2*(contador*contador))+(4*contador)-3;
+    valory= (2*Math.pow(contador,2))+(4*contador)-3;
     
-System.out.println(("        "+contador)+"                "+(valory));  
+System.out.println(("        "+contador)+"                "+
+                     String.format("%.2f", valory));   
 }
 System.out.println("|_______________________________________|");        
 

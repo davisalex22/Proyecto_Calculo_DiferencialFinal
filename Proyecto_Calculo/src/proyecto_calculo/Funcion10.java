@@ -17,25 +17,27 @@ lim_superior = entrada.nextInt();
 System.out.println("Ingrese la escala de la tabla de valores:\n");
 escala = entrada.nextDouble();
 // Generación de límites de la tabla
-System.out.println("_________________________________________ "  + "\n" +
-                   "|------  La función es 2x^2+4x-3  ------|"   + "\n" +
-                   "_________________________________________ "  + "\n" +
-                   "| Límite inferior = "+lim_inferior           + "\n" +
-                   "|Límite superior = "+lim_superior            + "\n" +
-                   "| Escala = "+escala                          + "\n" +        
-                   "_________________________________________ "  + "\n" +
-                   "|            TABLA DE VALORES           |  " + "\n" +
-                   "|_______________________________________|");
+System.out.println("________________________________________________ "  + "\n" +
+                   "|-La función es 6/3x^5-20/3x^4+12x^3-3x^2+x-5  -|"  + "\n" +
+                   "________________________________________________ "  + "\n" +
+                   "|* Límite inferior = "+lim_inferior                 + "\n" +
+                   "|* Límite superior = "+lim_superior                 + "\n" +
+                   "|* Escala = "+escala                                + "\n" +        
+                   "________________________________________________ "  + "\n" +
+                   "|                 TABLA DE VALORES              | " + "\n" +
+                   "|_______________________________________________|");
 
 double contador = lim_inferior-escala;
-System.out.println("|         x          |        y         |");
+System.out.println("|            x          |           y           |");
 while (contador < lim_superior) {    
     contador = contador + escala;
-    valory= (2*(contador*contador))+(4*contador)-3;
+    valory =2*(Math.pow(contador, 5))-(6.66)*(Math.pow(contador, 4))+
+            12*(Math.pow(contador, 3))-3*(Math.pow(contador, 2))+contador -5;
     
-System.out.println(("        "+contador)+"                "+(valory));  
+System.out.println(("           "+contador)+"                  "+
+                    (String.format("%.2f", valory)));  
 }
-System.out.println("|_______________________________________|");        
+System.out.println("|______________________________________________|");        
 
     
 // FIN PROGRAMA

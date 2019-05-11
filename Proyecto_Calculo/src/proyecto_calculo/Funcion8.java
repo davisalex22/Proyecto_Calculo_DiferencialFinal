@@ -20,9 +20,9 @@ escala = entrada.nextDouble();
 System.out.println("_________________________________________ "  + "\n" +
                    "|- La función es 50/5x^3+1/2x^2-2x+12  -|"   + "\n" +
                    "_________________________________________ "  + "\n" +
-                   "| Límite inferior = "+lim_inferior           + "\n" +
-                   "|Límite superior = "+lim_superior            + "\n" +
-                   "| Escala = "+escala                          + "\n" +        
+                   "|* Límite inferior = "+lim_inferior          + "\n" +
+                   "|* Límite superior = "+lim_superior          + "\n" +
+                   "|* Escala = "+escala                         + "\n" +        
                    "_________________________________________ "  + "\n" +
                    "|            TABLA DE VALORES           |  " + "\n" +
                    "|_______________________________________|");
@@ -31,7 +31,8 @@ double contador = lim_inferior-escala;
 System.out.println("|         x          |        y         |");
 while (contador < lim_superior) {    
     contador = contador + escala;
-  valory = (50/5*Math.pow(contador, 3))+(1/2*Math.pow(contador, 2))-(2*(contador)) + 12;
+  valory = 10*(Math.pow(contador, 3))+0.5*(Math.pow(contador, 2))-
+          (2*(contador)) + 12;
     
 System.out.println(("        "+contador)+"                "+(valory));  
 }
