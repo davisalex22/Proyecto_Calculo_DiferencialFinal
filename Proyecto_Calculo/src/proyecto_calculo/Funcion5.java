@@ -38,7 +38,7 @@ public class Funcion5 {
         double contador = lim_inferior;
         mensaje_final += "|         x   |                y         |\n";
         while (contador < lim_superior) {
-            contador = contador + escala;
+            
             valory = (14 * (Math.pow(contador, 3))) + (0.5) * (Math.pow(contador, 2))
                     - (7 * contador) - 2;
             mensaje_final += "        " + contador + "                "
