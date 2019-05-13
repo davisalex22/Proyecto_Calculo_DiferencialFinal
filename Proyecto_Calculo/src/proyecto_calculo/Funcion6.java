@@ -31,12 +31,12 @@ public class Funcion6 {
                 + "|* Límite inferior = " + lim_inferior + "\n"
                 + "|* Límite superior = " + lim_superior + "\n"
                 + "|* Escala = " + escala + "\n"
-                + "_________________________________________ " + "\n"
-                + "|            TABLA DE VALORES           |  " + "\n"
-                + "|_______________________________________|";
+                + " __________________ " + "\n"
+                + "| TABLA DE VALORES  |  " + "\n"
+                + "|__________________|\n";
 
         double contador = lim_inferior;
-        mensaje_final += "|         x          |        y         |";
+        mensaje_final +="|         x   |                y         |\n";
         while (contador < lim_superior) {
             contador = contador + escala;
             valory = (16 * Math.pow(contador, 2)) + (4 * contador) - 5;
@@ -45,7 +45,7 @@ public class Funcion6 {
                     + valory + "\n";
             contador += escala;
         }
-        mensaje_final += "|_______________________________________|";
+        mensaje_final += "|__________________|\n";
 
         // FIN PROGRAMA
         JOptionPane.showMessageDialog(null, mensaje_final);

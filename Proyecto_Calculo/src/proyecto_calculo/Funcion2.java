@@ -1,10 +1,7 @@
 package proyecto_calculo;
-
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-
 public class Funcion2 {
-
     public static void main(String[] args) {
 // INICIO PROGRAMA
         Scanner entrada = new Scanner(System.in);
@@ -26,17 +23,16 @@ public class Funcion2 {
         escala = Double.parseDouble(cadena);
 // Generación de límites de la tabla
         mensaje_final += "_________________________________________ " + "\n"
-                + "|------  La función es 4x^2+2x-10  ------|" + "\n"
-                + "_________________________________________ " + "\n"
-                + "|* Límite inferior = " + lim_inferior + "\n"
-                + "|* Límite superior = " + lim_superior + "\n"
-                + "|* Escala = " + escala + "\n"
-                + "_________________________________________ " + "\n"
-                + "|            TABLA DE VALORES           |  " + "\n"
-                + "|_______________________________________|";
-
+                + "|------  La función es 4x^2+2x-10  ------|"        + "\n"
+                + "_________________________________________ "        + "\n"
+                + "|* Límite inferior = " + lim_inferior              + "\n"
+                + "|* Límite superior = " + lim_superior              + "\n"
+                + "|* Escala = " + escala                             + "\n"
+                + " __________________ "                              + "\n"
+                + "| TABLA DE VALORES  |"                             + "\n"
+                + "|__________________|\n";
         double contador = lim_inferior;
-        mensaje_final += "|         x          |        y         |";
+        mensaje_final += "|         x   |                y         |\n";
         while (contador < lim_superior) {
             contador = contador + escala;
             valory = (4 * (Math.pow(contador, 2))) + (2 * contador) - 10;
@@ -45,7 +41,7 @@ public class Funcion2 {
                     + valory + "\n";
             contador += escala;
         }
-        mensaje_final += "|_______________________________________|";
+        mensaje_final += "|__________________|\n";
 
         // FIN PROGRAMA
         JOptionPane.showMessageDialog(null, mensaje_final);

@@ -1,14 +1,8 @@
 package proyecto_calculo;
-
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-
 //librerias para graficas
-import java.awt.Color;
-import java.awt.Graphics;
-import javax.swing.BorderFactory;
 import javax.swing.JPanel;
-
 public class Funcion1 extends JPanel {
     public static void main(String[] args) {
         // INICIO PROGRAMA
@@ -29,26 +23,18 @@ public class Funcion1 extends JPanel {
 
         cadena = JOptionPane.showInputDialog("Ingrese la escala de la tabla de valores:\n");
         escala = Double.parseDouble(cadena);
-        
-//            System.out.println(" Ingrese el límite inferior de la tabla de valores:\n ");
-//            lim_inferior = entrada.nextInt();
-//            System.out.println("Ingrese el límite superior de la tabla de valores:\n");
-//            lim_superior = entrada.nextInt();
-//            System.out.println("Ingrese la escala de la tabla de valores:\n");
-//            escala = entrada.nextDouble();
         // Generación de límites de la tabla
         mensaje_final +="_________________________________________" + "\n"
-                + "|------  La función es 2x^2+4x-3  ------|" + "\n"
-                + "_________________________________________" + "\n"
-                + "|* Límite inferior = " + lim_inferior + "\n"
-                + "|* Límite superior = " + lim_superior + "\n"
-                + "|* Escala = " + escala + "\n"
-                + "_________________________________________ " + "\n"
-                + "|            TABLA DE VALORES           |  " + "\n"
-                + "|_______________________________________|\n";
-
+                      + "|------  La función es 2x^2+4x-3  ------|" + "\n"
+                      + "_________________________________________" + "\n"
+                      + "|* Límite inferior = " + lim_inferior      + "\n"
+                      + "|* Límite superior = " + lim_superior      + "\n"
+                      + "|* Escala = " + escala                     + "\n"
+                      + " __________________ "                      + "\n"
+                      + "| TABLA DE VALORES  |"                     + "\n"
+                      + "|__________________|\n";
         double contador = lim_inferior;
-        mensaje_final += "|         x          |        y         | \n";
+        mensaje_final += "|         x   |                y         |\n";
         while (contador <= lim_superior) {
             valory = (2 * Math.pow(contador, 2)) + (4 * contador) - 3;
 
@@ -56,8 +42,7 @@ public class Funcion1 extends JPanel {
                     + valory + "\n";
             contador += escala;
         }
-        mensaje_final += "|_______________________________________|";
-
+        mensaje_final += "|__________________|\n";
         // FIN PROGRAMA
         JOptionPane.showMessageDialog(null, mensaje_final);
     }

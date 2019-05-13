@@ -1,10 +1,7 @@
 package proyecto_calculo;
-
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-
 public class Funcion10 {
-
     public static void main(String[] args) {
 // INICIO PROGRAMA
         Scanner entrada = new Scanner(System.in);
@@ -29,15 +26,15 @@ public class Funcion10 {
         mensaje_final +="________________________________________________ " + "\n"
                 + "|-La función es 6/3x^5-20/3x^4+12x^3-3x^2+x-5  -|" + "\n"
                 + "________________________________________________ " + "\n"
-                + "|* Límite inferior = " + lim_inferior + "\n"
+                + "|* Límite inferior = " + lim_inferior                  + "\n"
                 + "|* Límite superior = " + lim_superior + "\n"
                 + "|* Escala = " + escala + "\n"
-                + "________________________________________________ " + "\n"
-                + "|                 TABLA DE VALORES              | " + "\n"
-                + "|_______________________________________________|";
+                + " __________________ " + "\n"
+                + "| TABLA DE VALORES  |  " + "\n"
+                + "|__________________|\n";
 
         double contador = lim_inferior;
-        mensaje_final += "|            x          |           y           |";
+        mensaje_final += "|         x   |                y         |\n";
         while (contador < lim_superior) {
             contador = contador + escala;
             valory = 2 * (Math.pow(contador, 5)) - (6.66) * (Math.pow(contador, 4))
@@ -47,7 +44,7 @@ public class Funcion10 {
                     + valory + "\n";
             contador += escala;
         }
-        mensaje_final += "|_______________________________________________|";
+        mensaje_final += "|__________________|\n";
 
         // FIN PROGRAMA
         JOptionPane.showMessageDialog(null, mensaje_final);
