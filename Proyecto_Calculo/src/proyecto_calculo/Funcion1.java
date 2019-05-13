@@ -19,6 +19,7 @@ public class Funcion1 extends JPanel {
         double lim_superior = 0;
         double valory = 0;
         double escala = 0;
+        String mensaje_final = "";
         // Ingreso por teclado de información
         cadena = JOptionPane.showInputDialog("Ingrese el límite inferior de la tabla de valores:\n ");
         lim_inferior = Double.parseDouble(cadena);
@@ -28,7 +29,7 @@ public class Funcion1 extends JPanel {
 
         cadena = JOptionPane.showInputDialog("Ingrese la escala de la tabla de valores:\n");
         escala = Double.parseDouble(cadena);
-
+        
 //            System.out.println(" Ingrese el límite inferior de la tabla de valores:\n ");
 //            lim_inferior = entrada.nextInt();
 //            System.out.println("Ingrese el límite superior de la tabla de valores:\n");
@@ -36,7 +37,7 @@ public class Funcion1 extends JPanel {
 //            System.out.println("Ingrese la escala de la tabla de valores:\n");
 //            escala = entrada.nextDouble();
         // Generación de límites de la tabla
-        System.out.println("_________________________________________" + "\n"
+        mensaje_final +="_________________________________________" + "\n"
                 + "|------  La función es 2x^2+4x-3  ------|" + "\n"
                 + "_________________________________________" + "\n"
                 + "|* Límite inferior = " + lim_inferior + "\n"
@@ -44,23 +45,20 @@ public class Funcion1 extends JPanel {
                 + "|* Escala = " + escala + "\n"
                 + "_________________________________________ " + "\n"
                 + "|            TABLA DE VALORES           |  " + "\n"
-                + "|_______________________________________|");
+                + "|_______________________________________|\n";
 
-        double contador = lim_inferior - escala;
-        if (escala >= 0.00) {
-            escala = 1;
-        }
-        System.out.println("|         x          |        y         |");
+        double contador = lim_inferior;
+        mensaje_final += "|         x          |        y         | \n";
         while (contador <= lim_superior) {
-
             valory = (2 * Math.pow(contador, 2)) + (4 * contador) - 3;
 
-            System.out.println(("        " + contador) + "                "
-                    + String.format("%.2f", valory));
-            contador = contador + escala;
+            mensaje_final +="        " + contador + "                "
+                    + valory + "\n";
+            contador += escala;
         }
-        System.out.println("|_______________________________________|");
+        mensaje_final += "|_______________________________________|";
 
         // FIN PROGRAMA
+        JOptionPane.showMessageDialog(null, mensaje_final);
     }
 }

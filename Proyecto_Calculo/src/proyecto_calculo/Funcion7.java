@@ -1,5 +1,6 @@
 package proyecto_calculo;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 public class Funcion7 {
     public static void main(String[] args) {
 // INICIO PROGRAMA
@@ -9,15 +10,19 @@ double lim_inferior = 0;
 double lim_superior = 0;
 double valory = 0;
 double escala = 0;
-// Ingreso por teclado de información
-System.out.println(" Ingrese el límite inferior de la tabla de valores:\n ");
-lim_inferior = entrada.nextInt();
-System.out.println("Ingrese el límite superior de la tabla de valores:\n");
-lim_superior = entrada.nextInt();
-System.out.println("Ingrese la escala de la tabla de valores:\n");
-escala = entrada.nextDouble();
+        String cadena = "";
+        String mensaje_final = "";
+        // Ingreso por teclado de información
+        cadena = JOptionPane.showInputDialog("Ingrese el límite inferior de la tabla de valores:\n ");
+        lim_inferior = Double.parseDouble(cadena);
+
+        cadena = JOptionPane.showInputDialog("Ingrese el límite superior de la tabla de valores:\n ");
+        lim_superior = Double.parseDouble(cadena);
+
+        cadena = JOptionPane.showInputDialog("Ingrese la escala de la tabla de valores:\n");
+        escala = Double.parseDouble(cadena);
 // Generación de límites de la tabla
-System.out.println("_________________________________________ "  + "\n" +
+mensaje_final += "_________________________________________ "  + "\n" +
                    "|--- La función es 100x^3-30x^2+20x-5  --|"  + "\n" +
                    "_________________________________________ "  + "\n" +
                    "|* Límite inferior = "+lim_inferior          + "\n" +
@@ -25,20 +30,22 @@ System.out.println("_________________________________________ "  + "\n" +
                    "|* Escala = "+escala                         + "\n" +        
                    "_________________________________________ "  + "\n" +
                    "|            TABLA DE VALORES           |  " + "\n" +
-                   "|_______________________________________|");
+                   "|_______________________________________|";
 
-double contador = lim_inferior-escala;
-System.out.println("|         x          |        y         |");
+double contador = lim_inferior;
+mensaje_final += "|         x          |        y         |";
 while (contador < lim_superior) {    
     contador = contador + escala;
     valory= (100*Math.pow(contador,3))-(30*Math.pow(contador,2))+
             (20*contador)-5;;
     
-System.out.println(("        "+contador)+"                "+(valory));  
-}
-System.out.println("|_______________________________________|");        
+            mensaje_final += "        " + contador + "                "
+                    + valory + "\n";
+            contador += escala;
+        }
+        mensaje_final += "|_______________________________________|";
 
-    
-// FIN PROGRAMA
+        // FIN PROGRAMA
+        JOptionPane.showMessageDialog(null, mensaje_final);
     }
 }
